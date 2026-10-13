@@ -3,11 +3,17 @@
     <script type="text/brightscript" uri="pkg:/components/MainScene.brs" />
     <children>
         <Rectangle id="background" width="1280" height="720" color="0x071426FF" />
+        <Poster id="backgroundArtwork" translation="[0,0]" width="1280" height="720"
+            uri="https://mp3tourl.com/images/1790116455920-0030dd1a-85d7-401a-bb1b-8cdb4160da9a.png" loadDisplayMode="scaleToFill" />
+        <Rectangle id="backgroundShade" translation="[0,0]" width="1280" height="720"
+            color="0x071426B8" />
         <Rectangle id="accent" translation="[0,0]" width="1280" height="10" color="0xD7A83EFF" />
-        <Label id="brand" translation="[72,45]" width="1120" height="64"
+        <Poster id="stationLogo" translation="[72,28]" width="150" height="130"
+            uri="https://mp3tourl.com/images/1790116393287-639eac7e-fc16-40d4-b39c-3f7378f54dc5.jpg" loadDisplayMode="scaleToFit" />
+        <Label id="brand" translation="[250,45]" width="950" height="64"
             text="THE MID WEST PLAINSMAN TV"
             color="0xFFFFFFFF" font="font:LargeBoldSystemFont" />
-        <Label id="tagline" translation="[76,112]" width="1100" height="36"
+        <Label id="tagline" translation="[254,112]" width="930" height="36"
             text="Waterloo • Cedar Valley Corridor • Central Iowa"
             color="0xD7A83EFF" font="font:MediumSystemFont" />
         <Label id="sectionTitle" translation="[78,175]" width="700" height="44"
