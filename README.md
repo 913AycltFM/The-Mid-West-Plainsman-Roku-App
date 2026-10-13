@@ -16,6 +16,15 @@ The current code uses:
 
 This URL must remain publicly reachable and return a Roku-compatible HLS stream. If it changes or expires, update it in `components/MainScene.brs`.
 
+## Station artwork
+
+The Roku home screen uses the same artwork referenced by the TV Guide repository:
+
+- Logo: https://mp3tourl.com/images/1790116393287-639eac7e-fc16-40d4-b39c-3f7378f54dc5.jpg
+- Background: https://mp3tourl.com/images/1790116455920-0030dd1a-85d7-401a-bb1b-8cdb4160da9a.png
+
+The Roku device must be able to reach these image URLs over HTTPS for the artwork to display.
+
 ## Project structure
 
 - `manifest` — Roku channel metadata
