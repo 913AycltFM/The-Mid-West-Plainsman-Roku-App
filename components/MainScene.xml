@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="MainScene" extends="Scene">
+    <script type="text/brightscript" uri="pkg:/components/MainScene.brs" />
+    <children>
+        <Rectangle id="background" width="1280" height="720" color="0x071426FF" />
+        <Rectangle id="accent" translation="[0,0]" width="1280" height="10" color="0xD7A83EFF" />
+        <Label id="brand" translation="[72,45]" width="1120" height="64"
+            text="THE MID WEST PLAINSMAN TV"
+            color="0xFFFFFFFF" font="font:LargeBoldSystemFont" />
+        <Label id="tagline" translation="[76,112]" width="1100" height="36"
+            text="Waterloo • Cedar Valley Corridor • Central Iowa"
+            color="0xD7A83EFF" font="font:MediumSystemFont" />
+        <Label id="sectionTitle" translation="[78,175]" width="700" height="44"
+            text="WATCH &amp; EXPLORE" color="0xFFFFFFFF"
+            font="font:MediumBoldSystemFont" />
+        <LabelList id="menu" translation="[76,225]" itemSize="[570,66]"
+            numRows="4" focusable="true" />
+        <Rectangle id="infoPanel" translation="[700,225]" width="500" height="270"
+            color="0x12243AFF" />
+        <Label id="infoHeading" translation="[735,255]" width="430" height="55"
+            text="Your community. Your stories."
+            color="0xFFFFFFFF" font="font:MediumBoldSystemFont" />
+        <Label id="infoText" translation="[735,320]" width="420" height="145"
+            text="Watch the live stream and explore local news and videos from The Mid West Plainsman."
+            color="0xD7E1EFFF" font="font:MediumSystemFont" />
+        <Label id="status" translation="[76,630]" width="1120" height="48"
+            text="Choose an option and press OK."
+            color="0xD7A83EFF" font="font:SmallSystemFont" />
+        <Video id="video" width="1280" height="720" visible="false" />
+    </children>
+</component>
