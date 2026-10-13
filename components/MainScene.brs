@@ -40,7 +40,7 @@ sub playLiveTV()
     m.video.setFocus(true)
 
     content = CreateObject("roSGNode", "ContentNode")
-    content.url = "https://tv.913aycltfm.com/memfs/b502bd6f-86eb-4ca0-91c0-f09fb6a8f76e.m3u8"
+    content.url = "https://tv.913aycltfm.com/memfs/552ab1b0-d31a-4a5f-a9d7-d58a280deba2.m3u8"
     content.streamFormat = "hls"
     m.video.content = content
     m.video.control = "play"
