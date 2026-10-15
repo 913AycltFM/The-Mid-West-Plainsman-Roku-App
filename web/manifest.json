@@ -1,0 +1,16 @@
+{
+  "id": "./",
+  "name": "The Mid West Plainsman TV",
+  "short_name": "Mid West Plainsman",
+  "description": "Watch The Mid West Plainsman live and browse local TV listings.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#071426",
+  "theme_color": "#071426",
+  "categories": ["entertainment", "news", "video"],
+  "icons": [
+    {"src":"./icons/app-icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
