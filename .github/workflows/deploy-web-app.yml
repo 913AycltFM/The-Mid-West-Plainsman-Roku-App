@@ -1,0 +1,45 @@
+name: Deploy The Mid West Plainsman Web App
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "web/**"
+      - ".github/workflows/deploy-web-app.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: web-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - name: Prepare web app
+        run: |
+          mkdir -p _site
+          cp -R web/. _site/
+          curl --fail --location --retry 3 --output _site/epg.json https://raw.githubusercontent.com/913AycltFM/The-Mid-West-Plainsman-TV-Guide/main/epg.json
+          touch _site/.nojekyll
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Deploy web app
+        id: deployment
+        uses: actions/deploy-pages@v4
